@@ -194,7 +194,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-openmp-20.1.8-h4922eb0_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/lz4-c-1.10.0-h5888daf_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/make-4.4.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/markupsafe-3.0.2-py313h8060acc_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/matplotlib-inline-0.1.7-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/mesalib-25.0.5-h57bcd07_2.conda
@@ -289,7 +288,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/webcolors-24.11.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/webencodings-0.5.1-pyhd8ed1ab_3.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/websocket-client-1.8.0-pyhd8ed1ab_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/x13as-1.1.61-hc062a8b_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/xcb-util-0.4.1-h4f16b4b_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/xcb-util-image-0.4.0-hb711507_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/xcb-util-keysyms-0.4.1-hb711507_0.conda
@@ -705,15 +703,13 @@ packages:
   build: hb0f4dca_0
   subdir: linux-64
   depends:
-  - x13as
   - libstdcxx >=15
   - libgcc >=15
   - libgfortran5 >=15.1.0
   - libgfortran
   - libgcc >=15
   - gsl >=2.8,<2.9.0a0
-  - liblapack >=3.9.0,<3.10.0a0
-  - libmatio >=1.5.28,<1.5.29.0a0
+  - libblas >=3.9.0,<4.0a0
   - libsuitesparseconfig >=7.10.1,<8.0a0
   - libamd >=3.3.3,<4.0a0
   - libbtf >=2.3.2,<3.0a0
@@ -730,12 +726,13 @@ packages:
   - libspex >=3.2.3,<4.0a0
   - libspqr >=4.3.4,<5.0a0
   - suitesparse >=7.10.1,<8.0a0
+  - libmatio >=1.5.28,<1.5.29.0a0
   - octave >=10.2.0,<11.0a0
-  - libblas >=3.9.0,<4.0a0
   - hdf5 >=1.14.6,<1.14.7.0a0
+  - liblapack >=3.9.0,<3.10.0a0
   license: GPL-3.0-or-later
   input:
-    hash: 1addf560ba90fa6b4698db7951c170ed5faa35fd4ed14bd4734bdcf853c9e48f
+    hash: 0be0097f9c9aa8aa78260121af5a3c12414899dedb9478bb30dcbe23876757e1
     globs:
     - recipe.yaml
 - conda: https://conda.anaconda.org/conda-forge/noarch/exceptiongroup-1.3.0-pyhd8ed1ab_0.conda
@@ -2689,16 +2686,6 @@ packages:
   license_family: BSD
   size: 167055
   timestamp: 1733741040117
-- conda: https://conda.anaconda.org/conda-forge/linux-64/make-4.4.1-hb9d3cd8_2.conda
-  sha256: d652c7bd4d3b6f82b0f6d063b0d8df6f54cc47531092d7ff008e780f3261bdda
-  md5: 33405d2a66b1411db9f7242c8b97c9e7
-  depends:
-  - __glibc >=2.17,<3.0.a0
-  - libgcc >=13
-  license: GPL-3.0-or-later
-  license_family: GPL
-  size: 513088
-  timestamp: 1727801714848
 - conda: https://conda.anaconda.org/conda-forge/linux-64/markupsafe-3.0.2-py313h8060acc_1.conda
   sha256: d812caf52efcea7c9fd0eafb21d45dadfd0516812f667b928bee50e87634fae5
   md5: 21b62c55924f01b6eef6827167b46acb
@@ -3956,17 +3943,6 @@ packages:
   license_family: APACHE
   size: 46718
   timestamp: 1733157432924
-- conda: https://conda.anaconda.org/conda-forge/linux-64/x13as-1.1.61-hc062a8b_1.conda
-  sha256: 0eabd35cb7b69362d2702962399d902da3c7ed2ff73491cc88f916205e893bd3
-  md5: 756a8099f4288d896629b7d740c5e419
-  depends:
-  - __glibc >=2.17,<3.0.a0
-  - libgcc >=13
-  - libgfortran
-  - libgfortran5 >=13.3.0
-  license: LicenseRef-X13AS
-  size: 3237447
-  timestamp: 1729286520200
 - conda: https://conda.anaconda.org/conda-forge/linux-64/xcb-util-0.4.1-h4f16b4b_2.conda
   sha256: ad8cab7e07e2af268449c2ce855cbb51f43f4664936eff679b1f3862e6e4b01d
   md5: fdc27cb255a7a2cc73b7919a968b48f0

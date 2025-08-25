@@ -14,5 +14,4 @@ lab = {cmd = 'jupyter lab', depends-on='setup'}
 jupyterlab = ">=4.4.6,<5"
 xeus-octave = ">=0.3.0,<1"
 dynare = {path = "./dynare"}
-make = ">=4.4.1,<5"
-# make needed for installation of packages by octave
+# make = ">=4.4.1,<5" # make needed for installation of packages by octave

@@ -41,7 +41,6 @@ requirements:
     # FOR SLICOT
     - libblas
     - liblapack
-  run:
     - x13as
 
 about:

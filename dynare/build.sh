@@ -10,7 +10,7 @@ make -f makefile_Unix FORTRAN=$FC OPTS="-O2 -fPIC" LOADER=$FC lib
 cp slicot.a $PREFIX/lib/libslicot_pic.a
 cd ..
 
-
+# Copied from dynare_preprocessor_pylib's recipe, not sure if necessary
 export BOOST_ROOT=$PREFIX
 
 # Patch matio.pc to remove hdf5 dependency since it's hardcoded into our recipe
@@ -24,3 +24,6 @@ meson install -C build-octave
 
 # Install Octave statistics package (Dynare dependency)
 octave -e "pkg install -forge statistics"
+
+# rename x13as_ascii to be usable in dynare
+cp $PREFIX/bin/x13as_ascii $PREFIX/bin/x13as
