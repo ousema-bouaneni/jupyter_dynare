@@ -1,0 +1,52 @@
+context:
+  name: dynare
+  version: 6.4
+  slicot_version: 5.9
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  - url: https://www.dynare.org/release/source/dynare-${{version}}.tar.xz
+    target_directory: dynare
+  - url: https://github.com/SLICOT/SLICOT-Reference/archive/refs/tags/v${{slicot_version}}.tar.gz
+    target_directory: dynare/slicot
+
+build:
+  number: 0
+  skip:
+    - win
+    - osx
+
+requirements:
+  build:
+    - ${{ compiler("cxx") }}
+    - cmake
+    - bison
+    - flex
+    - meson
+    - pkg-config
+    - gfortran
+    # FOR SLICOT
+    - ${{ compiler('fortran') }}
+    - make
+  host:
+    - libboost-headers
+    - gsl
+    - libmatio
+    - hdf5
+    - suitesparse
+    - octave # Dynare's meson.build looks for umfpack in octlibdir
+    # FOR SLICOT
+    - libblas
+    - liblapack
+  run:
+    - x13as
+
+about:
+  homepage: https://www.dynare.org/
+  summary: Dynare
+  description: Dynare, a platform for handling a wide class of economic models.
+  license: GPL-3.0-or-later
+  license_file: dynare/COPYING

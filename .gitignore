@@ -1,0 +1,10 @@
+# pixi environments
+.pixi
+*.egg-info
+
+# Include examples without dynare output or logs
+examples/*
+!examples/*.mod
+
+.ipynb_checkpoints
+.octaverc
