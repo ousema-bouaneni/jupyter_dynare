@@ -6,6 +6,9 @@
 examples/*
 !examples/*.mod
 
+# Remove frontend extension's working directory
+dirty_working_directory
+
 # Octave
 .octaverc
 
