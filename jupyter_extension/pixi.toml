@@ -1,0 +1,21 @@
+[workspace] 
+channels = ["https://prefix.dev/conda-forge"]
+platforms = ["linux-64"]
+preview = ["pixi-build"]
+
+[dependencies]
+jupyter_dynare = { path = "." }
+
+[package]
+name = "jupyter_dynare"
+version = "0.1.2"
+
+[package.build] 
+backend = { name = "pixi-build-python", version = "==0.3.2" }
+
+[package.host-dependencies] 
+hatchling = "==1.26.3"
+hatch-nodejs-version = ">=0.3.2"
+hatch-jupyter-builder = ">=0.9.1"
+jupyterlab = ">=4.4.6,<5"
+nodejs = ">=24.4.1,<24.5"

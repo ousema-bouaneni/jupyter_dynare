@@ -8,9 +8,19 @@ preview = ["pixi-build"]
 
 [tasks]
 setup = 'echo "addpath $CONDA_PREFIX/lib/dynare/matlab" > .octaverc'
-lab = {cmd = 'jupyter lab', depends-on='setup'}
+lab = {cmd = 'jupyter lab', depends-on=['setup']}
 
 [dependencies]
 jupyterlab = ">=4.4.6,<5"
 xeus-octave = ">=0.3.0,<1"
 dynare = {path = "./dynare"}
+# needed for extension
+jupyter_dynare = { path = "./jupyter_extension"}
+
+[feature.copier.dependencies]
+copier = "*"
+jinja2-time = "*"
+git = ">=2.51.0,<3"
+
+[environments]
+dev = ["copier"]
