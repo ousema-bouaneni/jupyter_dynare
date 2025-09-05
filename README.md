@@ -3,8 +3,6 @@
 Run [Dynare](https://www.dynare.org/) (Octave version) directly inside JupyterLab using [xeus-octave](https://github.com/jupyter-xeus/xeus-octave).  
 This project provides a reproducible environment using [pixi](https://prefix.dev/pixi), so you can experiment with Dynare models in Jupyter notebooks seamlessly.
 
----
-
 ## Getting started
 
 ### 1. Install pixi
