@@ -34,3 +34,4 @@ You can try to run `tests.ipynb` and use Dynare as you would usually in the comm
 
 ## Project status
 - Works for running Dynare inside JupyterLab, but not yet for JupyterLite (`xeus-octave` needs to be ported first)
+- Double clicking on a file to run it with Dynare is still a WIP and crashes if two files are open simultaneously
