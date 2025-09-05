@@ -1,4 +1,4 @@
-# jupyter-dynare-octave
+# jupyter-dynare
 
 Run [Dynare](https://www.dynare.org/) (Octave version) directly inside JupyterLab using [xeus-octave](https://github.com/jupyter-xeus/xeus-octave).  
 This project provides a reproducible environment using [pixi](https://prefix.dev/pixi), so you can experiment with Dynare models in Jupyter notebooks seamlessly.
@@ -14,7 +14,7 @@ If you don’t already have it:
 ```
 ### 2. Clone this repo
 ```
-    git clone https://github.com/yourusername/jupyter-dynare-octave.git
+    git clone https://github.com/ousema-bouaneni/jupyter-dynare.git
     cd jupyter-dynare-octave
 ```
 
@@ -27,13 +27,13 @@ If you don’t already have it:
     pixi run lab
 ```
 This launches JupyterLab with Octave + Dynare available.  
-You can now either open a notebook and run Dynare commands inside as you would in Dynare or just open a `.mod` file directly!
+You can now either open a notebook and run Dynare commands inside as you would in Dynare or (WIP - still very buggy) just open a `.mod` file directly!
 
 ---
 
 ## Example
 
-Try to open `tests.ipynb` or any of the files in the `examples` directory from the newly launched Jupyterlab instance.
+You can try to run `tests.ipynb` and use Dynare as you would usually in the command line.
 
 ---
 
