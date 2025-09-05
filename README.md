@@ -29,13 +29,10 @@ If you don’t already have it:
 This launches JupyterLab with Octave + Dynare available.  
 You can now either open a notebook and run Dynare commands inside as you would in Dynare or (WIP - still very buggy) just open a `.mod` file directly!
 
----
-
 ## Example
 
 You can try to run `tests.ipynb` and use Dynare as you would usually in the command line.
 
----
 
 ## Project status
 - Works for running Dynare inside JupyterLab, but not yet for JupyterLite (`xeus-octave` needs to be ported first)
